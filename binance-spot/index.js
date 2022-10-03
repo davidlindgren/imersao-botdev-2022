@@ -11,7 +11,7 @@ ws.onmessage = async (event) => {
     console.log("Symbol: " + obj.s);
     console.log("Price: " + obj.a);
 
-    const price = parseFloat(obj.p);
+    const price = parseFloat(obj.a);
     if (price < 19000 && !isOpened) {
         console.log("Comprar!");
         newOrder("BTCUSDT", "0.001", "BUY");
